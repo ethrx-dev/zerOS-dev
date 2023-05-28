@@ -1,0 +1,14 @@
+build:
+  only:
+    - main
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  variables:
+    IMAGE_TAG: shrugal/umbrel-docker
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+  script:
+    - docker build --pull -t $IMAGE_TAG:$CI_COMMIT_REF_SLUG -t $IMAGE_TAG:latest ./build
+    - docker push -a $IMAGE_TAG:latest
