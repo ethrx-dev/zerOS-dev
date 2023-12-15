@@ -1,4 +1,4 @@
-# Umbrel in docker
+# zerOS/Umbrel in docker
 
 Simple docker container and scripts to run Umbrel itself inside a docker
 container, so it doesn't require the host machine to run on a Debian based OS.
