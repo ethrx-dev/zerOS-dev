@@ -4,7 +4,7 @@ ENV INSTALL_PATH=/root/umbrel
 
 RUN apt-get -y update && apt-get -y install sudo curl iproute2
 
-RUN curl -L https://umbrel.sh | bash -s -- \
+RUN curl -L https://raw.githubusercontent.com/ethrx-dev/umbrel/master/scripts/install | bash -s -- \
     --bootstrapped \
     --no-install-umbrel
 
