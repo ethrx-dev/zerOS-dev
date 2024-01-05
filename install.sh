@@ -2,7 +2,7 @@
 
 INSTALL_PATH=${INSTALL_PATH:-$PWD/data}
 
-curl -L https://umbrel.sh \
+curl -L https://raw.githubusercontent.com/ethrx-dev/umbrel/master/scripts/install \
     | sed "s|    sudo \${UMBREL_INSTALL_PATH}/scripts/start||" \
     | bash -s -- \
         --bootstrapped \
